@@ -1,0 +1,60 @@
+
+
+@default-text-color: #007aff;
+
+.container-shadow (@shadow-color: gray, @shadow-opacity: 1) {
+  //投影方式(默认外部，可忽略) X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色
+  -webkit-box-shadow: 2px 2px 6px @shadow-color;
+  -moz-box-shadow: 2px 2px 6px @shadow-color;
+  box-shadow: 2px 2px 6px @shadow-color;
+  opacity: @shadow-opacity;
+}
+
+.background-color (@color: white) {
+  background: @color none repeat scroll 0 0;
+}
+
+.white-background-color {
+  .background-color;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.app-title (@color: @default-text-color) {
+  font-weight: bold;
+  color: @color;
+}
+
+.panel {
+  background: white none repeat scroll 0 0;
+}
+
+.page {
+  .white-background-color;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.normal-font {
+  font-size: 12px;
+}
+
+// model
+
+.modal-title {
+  font-size: 14px;
+}
+
+.modal .preloader {
+  height: 20px;
+  width: 20px;
+}

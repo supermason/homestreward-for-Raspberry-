@@ -1,0 +1,29 @@
+.white-background-color {
+  background: white none repeat scroll 0 0;
+}
+.center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.panel {
+  background: white none repeat scroll 0 0;
+}
+.page {
+  background: white none repeat scroll 0 0;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.normal-font {
+  font-size: 12px;
+}
+.modal-title {
+  font-size: 14px;
+}
+.modal .preloader {
+  height: 20px;
+  width: 20px;
+}

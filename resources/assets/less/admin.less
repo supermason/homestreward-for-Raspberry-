@@ -1,0 +1,512 @@
+
+@import "theme-d";
+@import "transition";
+
+@default-background-color: #f9f9f9;
+@default-text-color: #999;
+@red-color: #CA3131;
+@red-dark: darken(@red-color, 20%);
+@default-border-color: lighten(@red-color, 30%);
+@gray-border-color: #ddd;
+@red-tab-border: @red-color @red-color transparent;
+@red-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(204, 51, 51, 0.6);
+@input-height: 44px;
+
+//
+html,
+body {
+  color: @default-text-color;
+}
+
+.top-gap {
+  margin-top: 30px;
+}
+
+.red-shadow {
+  -webkit-box-shadow: @red-box-shadow;
+  -moz-box-shadow: @red-box-shadow;
+  box-shadow: @red-box-shadow;
+}
+
+.danger-left-arrow {
+  .arrow-left(4px);
+}
+
+.warning-left-arrow {
+  .arrow-left(4px, #f0ad4e);
+}
+
+// 超链接
+a {
+  color: @red-color;
+}
+
+// 导航条
+.admin-navbar {
+
+  border-bottom: 1px solid @default-border-color;
+  .background-color(white);
+  box-shadow: 0 0px 3px rgba(204, 51, 51, 0.5);
+  -webkit-box-shadow: 0 0px 3px rgba(204, 51, 51, 0.5);
+  -moz-box-shadow: 0 0px 3px rgba(204, 51, 51, 0.5);
+
+  .active {
+    background-color: transparent;
+    border: 1px solid @red-color;
+    border-radius: 4px;
+
+    font-weight: bold;
+  }
+
+  .active-selected {
+    background-color: @default-background-color;
+    color: @red-dark;
+  }
+
+  .active-selected-with-border {
+    border: 1px solid @red-dark;
+    .active-selected;
+  }
+
+  ul {
+    &.admin-nav {
+
+      padding: 15px;
+
+      li {
+        margin-right: 15px;
+
+        a {
+          padding: 15px 20px;
+
+          &:not(.active) {
+            &:focus,
+            &:hover {
+              background-color: @red-color;
+              color: white;
+              border-radius: 4px;
+
+              .background-transition;
+            }
+          };
+
+          &.active {
+            &:focus,
+            &:hover {
+              .active-selected-with-border;
+              .background-transition;
+            }
+          }
+        }
+
+        ul {
+          &.admin-dropdown-menu  {
+            > li {
+              margin: 0;
+              > a {
+                color: @red-color;
+
+                &:focus,
+                &:hover {
+                  background-image: none;
+                  border-radius: 0;
+                  .active-selected;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .admin-navbar {
+    .admin-nav {
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  height: auto;
+}
+
+.navbar-toggle {
+  border: 1px solid @red-color;
+  margin-top: 23px;
+
+  .icon-bar {
+    .background-color(@red-color);
+  }
+}
+
+// 大的横幅
+.banner {
+  margin-bottom: 40px;
+  padding: 30px;
+
+  background-color: @red-color;
+  background-image: linear-gradient(to bottom, darken(@red-color, 10%) 0px, @red-color 100%);
+  background-repeat: repeat-x;
+  color: lighten(@red-color, 20%);
+  position: relative;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+@media (min-width:768px) {
+  .banner {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align:left;
+
+    h1 {
+      font-size:60px;
+      line-height:1
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .bs-docs-header {
+    h1,
+    p {
+      margin-right:380px
+    }
+  }
+}
+
+// index界面的主要内容部分
+.main-container {
+
+  padding: 50px 0 40px;
+
+  h2 {
+    text-align: center;
+    font-size: 48px;
+    padding: 10px 0 20px;
+    margin-bottom: 40px;
+    color: darken(@default-text-color, 10%);
+  }
+
+  .admin-grid {
+
+    .center;
+
+    padding: 40px 30px 30px;
+
+    a {
+
+      &.product-admin {
+        &::before {
+          content: url("/img/wd/admin/product_admin.png");
+        }
+      }
+
+      &.activity-admin {
+        &::before {
+          content: url("/img/wd/admin/activity_admin.png");
+        }
+      }
+
+      p {
+        padding: 5px 0 10px;
+        color: @default-text-color;
+      }
+
+      p:first-child {
+        font-size: 20px;
+        font-weight: bold;
+        color: lighten(@red-color, 10%);
+        margin-top: 10px;
+      }
+      
+      p:last-child {
+        text-align: left;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: lighten(@red-color, 10%);
+        outline: none;
+      }
+    }
+
+    &:hover {
+      background-color: darken(@default-background-color, 5%);
+      border-radius: 4px;
+      .background-transition;
+    }
+  }
+}
+
+// product和activity页的tab导航样式
+.sub-admin-nav {
+
+  border-color: @red-color;
+
+  > li {
+
+    &.active {
+      > a {
+        color: @red-color;
+        font-weight: bold;
+        border-color: @red-tab-border;
+        &:hover,
+        &:focus {
+          color: @red-color;
+          border-color: @red-tab-border;
+        }
+      }
+    }
+
+    > a {
+
+      color: @default-text-color;
+
+      &:hover,
+      &:focus {
+        border-color: @red-tab-border;
+        color: @red-dark;
+        //color: @red-color;
+        //border-color: @default-background-color;
+        //background: @default-background-color;
+        //.background-transition;
+      }
+    }
+  }
+}
+
+// 产品列表容器
+
+.p-container {
+  content: "";
+  display: table;
+}
+
+.wd-form-control {
+  border-color: lighten(@red-color, 20%);
+  color: darken(@red-color, 10%);
+  box-shadow: 0 1px 1px rgba(204, 51, 51, 0.075) inset;
+  border-radius: 0;
+
+  &:focus {
+    border-color: @red-color;
+    .red-shadow;
+  }
+}
+
+.wd-common-container {
+  border-left: 1px solid @red-color;
+  border-right: 1px solid @red-color;
+  border-bottom: 1px solid @red-color;
+
+  &:before {
+    .p-container;
+  }
+
+  &:after {
+    .p-container;
+    clear: both;
+  }
+
+  padding: 20px;
+
+  .form-control {
+    .wd-form-control;
+  }
+
+  .form-control:not(textarea) {
+    height: @input-height;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.product-content {
+
+  .wd-common-container;
+
+  table {
+
+    margin-top: 20px;
+    margin-bottom: 0px;
+
+    border-bottom: 1px solid @gray-border-color;
+
+    thead {
+      color: whitesmoke;
+      background-color: @red-dark;
+    }
+
+    tbody {
+      tr {
+        td {
+
+          vertical-align: middle;
+
+          img {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .table-hover {
+    > tbody {
+      > tr {
+        &:hover {
+          background-color: lighten(@red-color, 45%);
+          color: @red-dark;
+        }
+      }
+    }
+  }
+
+  .page-info {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.common-form-container {
+
+  .wd-common-container;
+
+  input[type="file"] {
+    width: 100%;
+    height: @input-height;
+    border: 1px solid;
+    padding: 2px 2px @input-height + 2px;
+    .wd-form-control;
+  }
+
+  .form-group {
+    .control-label {
+      color: @red-dark;
+    }
+
+    .editable-img {
+      .red-shadow;
+    }
+  }
+
+  h3 {
+    margin: 5px 0 0;
+
+    .label {
+      border-radius: 0;
+      height: @input-height;
+      padding: 0.3em 1em 0.4em;
+    }
+
+    .label-danger {
+      background-color: @red-color;
+    }
+  }
+}
+
+.placeholder {
+  color: darken(@red-color, 10%);
+  opacity: 0.6;
+}
+
+.form-control::-moz-placeholder {
+  .placeholder;
+}
+.form-control::-webkit-input-placeholder {
+  .placeholder;
+}
+.form-control:-ms-input-placeholder {
+  .placeholder;
+}
+
+// 页码样式
+
+.page-active {
+  background-color: @red-color;
+  border-color: @red-color;
+}
+
+.pagination {
+
+  float: right;
+
+  > .active {
+     > a,
+     > span {
+
+       .page-active;
+
+       &:focus,
+       &:hover {
+         .page-active;
+       }
+     }
+  }
+
+  > li {
+    > a,
+    > span {
+      color: @red-color;
+
+      &:focus,
+      &:hover {
+        color: @red-color;
+      }
+    }
+  }
+}
+
+// error页面的样式
+.tip-container {
+
+  .tip-title {
+
+  }
+
+  .tip-content {
+
+  }
+}
+
+// 底部信息
+.footer {
+  margin-top: 100px;
+  padding: 60px 0;
+  color: @default-text-color;
+  text-align: center;
+  background-color: lighten(@red-color, 45%);
+  //border-top: 1px solid @default-border-color;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

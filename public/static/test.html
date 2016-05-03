@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function getDaysInMonth(year,month){
+            if (month < 1)       month = 1;
+            else if (month > 12) month = 12;
+
+            var temp = new Date(year, month, 0);
+            return temp.getDate();
+        }
+
+        alert(getDaysInMonth(2014, 2));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

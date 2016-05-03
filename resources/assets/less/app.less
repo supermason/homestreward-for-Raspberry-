@@ -1,0 +1,368 @@
+﻿/*
+    http://winless.org/
+*/
+
+@import "theme";
+
+@panel-inner-color: #f2f2f2;
+@error-color: #ff2d55;
+
+.theme-m {
+  .container-shadow;
+}
+
+/*==login==*/
+.error {
+  border-radius: 6px;
+  border: 1px solid darken(@error-color, 20%);
+  background-color: lighten(@error-color, 40%);
+  color: @error-color;
+  padding: 15px;
+  margin: 0 15px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+/*====================================================Mason Start============================================================*/
+/*登录页面底部的 注册|找回密码*/
+
+.copyright {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  left: 0;
+  top: 10px;
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  color: #909090;
+  font-size:16px;
+
+  > a {
+      display: inline-block;
+      color: #909090;
+  }
+}
+
+.white-title {
+    color: white;
+}
+
+i.icon.icon-blank {
+    width: 29px;
+    height: 29px;
+}
+
+.hidden {
+    display: none;
+}
+
+.panel-left-add {
+
+  background: #f2f2f2 none repeat scroll 0 0;
+
+    .content-block {
+        margin: 0;
+    }
+
+    >.content-block-title {
+        margin: 0;
+
+       p {
+           line-height: 40px;
+           text-align: center;
+            font-size: 16px;
+       }
+    }
+
+    .list-block {
+        margin: 0;
+
+        .item-inner {
+          padding-bottom: 0;
+          padding-top: 0;
+        }
+
+        input[type="text"] {
+            font-size: 12px;
+            font-weight: bold;
+            color: lighten(@default-text-color, 10%);
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            margin: 5px 0;
+        }
+    }
+
+    li.accordion-item {
+
+      .item-inner {
+        display: block;
+
+        p {
+          .center;
+          color: lighten(@default-text-color, 10%);
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+
+      .accordion-item-content {
+
+        .label-radio {
+          &.item-content {
+            .item-inner {
+              >small {
+                font-size: 12px;
+                color: lighten(@default-text-color, 10%);
+              }
+            }
+          }
+
+          input[type="checkbox"],
+          input[type="radio"] {
+            ~ .item-inner {
+              padding-top: 7px;
+            }
+          }
+        }
+      }
+    }
+
+  .bill-total-title {
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .by-cc {
+    color: #007aff;
+    font-size: 14px;
+  }
+}
+
+.user-panel {
+
+    >.content-block {
+        margin-top:0;
+        .content-block-inner {
+            background: @panel-inner-color;
+            padding: 20px 15px 10px;
+    
+            div.avatar {
+            text-align:center;
+            margin:0 auto;
+            width:80px;
+            height:80px;
+            border-radius:40px;
+            border:1px solid #ddd;
+            overflow:hidden;
+
+                img {
+                    width:100%;
+                }
+            }
+            p {
+                text-align:center;
+            }
+        }
+    }
+
+    .links {
+
+        margin: 10px auto;
+        text-align: center;
+
+        ul {
+
+            li {
+                height: 20px;
+                list-style-type: none;
+                margin: 4px 0 4px -40px;
+                overflow: hidden;
+                //padding: 8px 0;
+                //border: 1px solid #ff2d55;
+            }
+
+            a {
+                display: block;
+                color: lighten(@default-text-color, 10%);
+                font-weight:bold;
+	            height: 20px;
+                width: 260px;
+	            //font: lighter 2em/1em "微软雅黑";
+                //font-size: 12px;
+	            text-decoration: none;
+
+	            -webkit-transition: margin .4s ease-in-out;
+	            -moz-transition: margin .4s ease-in-out;
+	            -o-transition: margin .4s ease-in-out;
+	            -ms-transition: margin .4s ease-in-out;
+	            transition: margin .4s ease-in-out;
+            }
+
+            a:nth-of-type(even) {
+	            color: white;
+                background-color: lighten(@default-text-color, 20%);
+                //padding-top: 0.2em;
+            }
+
+            li:hover :first-child {
+	            margin-top: -20px;
+            }
+        }
+    }
+}
+
+.item-media {
+
+    span {
+
+        padding-top: 5px;
+
+        i {
+            font-size: 1.3em;
+            color: darken(#999, 10%);
+        }
+    }
+}
+
+
+.avatar-container {
+  margin:0;
+  
+  .content-block-inner {
+    padding-top:20px;
+    background-color:#f2f2f2;
+
+    .avatar {
+      text-align:center;
+      margin:0 auto;
+      width:80px;
+      height:80px;
+      border-radius:40px;
+      border:1px solid #ddd;
+      overflow:hidden;
+
+      img {
+        width:100%;
+      }
+    }
+    p {
+      text-align:center;
+      span {
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.card-header {
+
+  background-color: lighten(#99caff, 10%);
+
+  .date {
+    font-size: 10px;
+    color: #66afff;
+    background-color: lighten(whitesmoke, 10%);
+    padding: 5px 8px;
+    border-radius: 4px;
+  }
+}
+
+.user-picker {
+  background-color: white;
+  height: 300px;
+
+  .list-block {
+    margin: 0;
+  }
+}
+
+.change-password-picker {
+  .user-picker;
+}
+
+.change-face-picker {
+  .user-picker;
+}
+
+.button-close-calendar {
+  border-top: 1px solid #c4c4c4;
+  display: block;
+  padding: 4px 10px;
+  text-align: right;
+}
+
+.go-to-wd {
+  padding-left: 15px;
+  background: whitesmoke none repeat scroll 0 0;
+
+  p {
+    color: @error-color;
+    margin: 0;
+    padding: 1em 0;
+
+    a {
+      background: #007aff none repeat scroll 0 0;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 4px;
+      padding: 4px 6px;
+    }
+  }
+}
+
+.tabs {
+  .tab {
+    .list-block {
+      &.accordion-list {
+
+        margin: 0 15px;
+        font-size: 14px;
+
+        .list-search-bar {
+          border-radius: 7px 7px 0 0;
+        }
+
+        .item-content {
+          background: whitesmoke none repeat scroll 0 0;
+        }
+      }
+
+      &.inset {
+        li {
+          &:last-child {
+            > a {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs-animated-wrap {
+  height: auto;
+}
+
+.inventory-button-block {
+  box-sizing: border-box;
+  color: #6d6d72;
+  padding: 0 15px;
+}
+
+.little-top-margin {
+  margin-top: 10px;
+}
+
+/*====================================================Mason End============================================================*/

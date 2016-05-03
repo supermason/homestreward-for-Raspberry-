@@ -1,0 +1,19 @@
+/**
+ * 桌面端网站的一些通用样式
+ */
+.center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.btn-fill {
+  width: 100%;
+}
+.zero {
+  color: red;
+  font-weight: bold;
+}
+.has-inventory {
+  color: green;
+}

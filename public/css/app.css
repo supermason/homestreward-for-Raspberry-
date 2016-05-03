@@ -1,0 +1,301 @@
+/*
+    http://winless.org/
+*/
+.white-background-color {
+  background: white none repeat scroll 0 0;
+}
+.center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.panel {
+  background: white none repeat scroll 0 0;
+}
+.page {
+  background: white none repeat scroll 0 0;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.normal-font {
+  font-size: 12px;
+}
+.modal-title {
+  font-size: 14px;
+}
+.modal .preloader {
+  height: 20px;
+  width: 20px;
+}
+.theme-m {
+  -webkit-box-shadow: 2px 2px 6px gray;
+  -moz-box-shadow: 2px 2px 6px gray;
+  box-shadow: 2px 2px 6px gray;
+  opacity: 1;
+}
+/*==login==*/
+.error {
+  border-radius: 6px;
+  border: 1px solid #c60026;
+  background-color: #fff9fa;
+  color: #ff2d55;
+  padding: 15px;
+  margin: 0 15px;
+}
+.error ul {
+  list-style: none;
+  padding: 0;
+}
+/*====================================================Mason Start============================================================*/
+/*登录页面底部的 注册|找回密码*/
+.copyright {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  left: 0;
+  top: 10px;
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  color: #909090;
+  font-size: 16px;
+}
+.copyright > a {
+  display: inline-block;
+  color: #909090;
+}
+.white-title {
+  color: white;
+}
+i.icon.icon-blank {
+  width: 29px;
+  height: 29px;
+}
+.hidden {
+  display: none;
+}
+.panel-left-add {
+  background: #f2f2f2 none repeat scroll 0 0;
+}
+.panel-left-add .content-block {
+  margin: 0;
+}
+.panel-left-add > .content-block-title {
+  margin: 0;
+}
+.panel-left-add > .content-block-title p {
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.panel-left-add .list-block {
+  margin: 0;
+}
+.panel-left-add .list-block .item-inner {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.panel-left-add .list-block input[type="text"] {
+  font-size: 12px;
+  font-weight: bold;
+  color: #3395ff;
+  text-align: center;
+}
+.panel-left-add .list-block input[type="submit"] {
+  margin: 5px 0;
+}
+.panel-left-add li.accordion-item .item-inner {
+  display: block;
+}
+.panel-left-add li.accordion-item .item-inner p {
+  text-align: center;
+  color: #3395ff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.panel-left-add li.accordion-item .accordion-item-content .label-radio.item-content .item-inner > small {
+  font-size: 12px;
+  color: #3395ff;
+}
+.panel-left-add li.accordion-item .accordion-item-content .label-radio input[type="checkbox"] ~ .item-inner,
+.panel-left-add li.accordion-item .accordion-item-content .label-radio input[type="radio"] ~ .item-inner {
+  padding-top: 7px;
+}
+.panel-left-add .bill-total-title {
+  font-size: 16px;
+  color: gray;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+.panel-left-add .by-cc {
+  color: #007aff;
+  font-size: 14px;
+}
+.user-panel > .content-block {
+  margin-top: 0;
+}
+.user-panel > .content-block .content-block-inner {
+  background: #f2f2f2;
+  padding: 20px 15px 10px;
+}
+.user-panel > .content-block .content-block-inner div.avatar {
+  text-align: center;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.user-panel > .content-block .content-block-inner div.avatar img {
+  width: 100%;
+}
+.user-panel > .content-block .content-block-inner p {
+  text-align: center;
+}
+.user-panel .links {
+  margin: 10px auto;
+  text-align: center;
+}
+.user-panel .links ul li {
+  height: 20px;
+  list-style-type: none;
+  margin: 4px 0 4px -40px;
+  overflow: hidden;
+}
+.user-panel .links ul a {
+  display: block;
+  color: #3395ff;
+  font-weight: bold;
+  height: 20px;
+  width: 260px;
+  text-decoration: none;
+  -webkit-transition: margin 0.4s ease-in-out;
+  -moz-transition: margin 0.4s ease-in-out;
+  -o-transition: margin 0.4s ease-in-out;
+  -ms-transition: margin 0.4s ease-in-out;
+  transition: margin 0.4s ease-in-out;
+}
+.user-panel .links ul a:nth-of-type(even) {
+  color: white;
+  background-color: #66afff;
+}
+.user-panel .links ul li:hover :first-child {
+  margin-top: -20px;
+}
+.item-media span {
+  padding-top: 5px;
+}
+.item-media span i {
+  font-size: 1.3em;
+  color: #808080;
+}
+.avatar-container {
+  margin: 0;
+}
+.avatar-container .content-block-inner {
+  padding-top: 20px;
+  background-color: #f2f2f2;
+}
+.avatar-container .content-block-inner .avatar {
+  text-align: center;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.avatar-container .content-block-inner .avatar img {
+  width: 100%;
+}
+.avatar-container .content-block-inner p {
+  text-align: center;
+}
+.avatar-container .content-block-inner p span {
+  padding: 0 5px;
+}
+.card-header {
+  background-color: #cce4ff;
+}
+.card-header .date {
+  font-size: 10px;
+  color: #66afff;
+  background-color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+.user-picker {
+  background-color: white;
+  height: 300px;
+}
+.user-picker .list-block {
+  margin: 0;
+}
+.change-password-picker {
+  background-color: white;
+  height: 300px;
+}
+.change-password-picker .list-block {
+  margin: 0;
+}
+.change-face-picker {
+  background-color: white;
+  height: 300px;
+}
+.change-face-picker .list-block {
+  margin: 0;
+}
+.button-close-calendar {
+  border-top: 1px solid #c4c4c4;
+  display: block;
+  padding: 4px 10px;
+  text-align: right;
+}
+.go-to-wd {
+  padding-left: 15px;
+  background: whitesmoke none repeat scroll 0 0;
+}
+.go-to-wd p {
+  color: #ff2d55;
+  margin: 0;
+  padding: 1em 0;
+}
+.go-to-wd p a {
+  background: #007aff none repeat scroll 0 0;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 4px;
+  padding: 4px 6px;
+}
+.tabs .tab .list-block.accordion-list {
+  margin: 0 15px;
+  font-size: 14px;
+}
+.tabs .tab .list-block.accordion-list .list-search-bar {
+  border-radius: 7px 7px 0 0;
+}
+.tabs .tab .list-block.accordion-list .item-content {
+  background: whitesmoke none repeat scroll 0 0;
+}
+.tabs .tab .list-block.inset li:last-child > a {
+  border-radius: 0;
+}
+.tabs-animated-wrap {
+  height: auto;
+}
+.inventory-button-block {
+  box-sizing: border-box;
+  color: #6d6d72;
+  padding: 0 15px;
+}
+.little-top-margin {
+  margin-top: 10px;
+}
+/*====================================================Mason End============================================================*/

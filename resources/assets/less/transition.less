@@ -1,0 +1,19 @@
+/**
+ * 专门负责缓动样式
+ */
+
+.do-transition(@property: all, @ease: linear, @duration: 1.5s) {
+  -webkit-transition: @property @ease @duration;
+  -moz-transition: @property @ease @duration;
+  -ms-transition: @property @ease @duration;
+  -o-transition: @property @ease @duration;
+  transition: @property @ease @duration;
+}
+
+.background-transition (@ease: linear, @duration: 1.5s) {
+  .do-transition(background-color, @ease, @duration);
+}
+
+.border-transition (@ease: linear, @duration: 1.5s) {
+  .do-transition(border, @ease, @duration);
+}

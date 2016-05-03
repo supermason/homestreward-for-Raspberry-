@@ -1,0 +1,40 @@
+
+/**
+ * 桌面端网站的一些通用样式
+ */
+
+
+.background-color (@color: white) {
+  background: @color none repeat scroll 0 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.arrow-left (@size: 20px, @color: #CA3131) {
+  width:0;
+  height:0;
+  font-size: 0;
+  vertical-align: middle;
+  border-top: @size solid transparent;
+  border-right: @size * 1.5 solid @color;
+  border-bottom: @size solid transparent;
+}
+
+.btn-fill {
+  width: 100%;
+}
+
+.zero {
+  color: red;
+  font-weight: bold;
+}
+
+.has-inventory {
+  color: green;
+}
